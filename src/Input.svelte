@@ -3,14 +3,24 @@
     export let value;
     export let label;
     export let id;
-   
 
+    let invalid = false;
+
+    function updateValue(){
+
+      if (value.length <= 3) {
+         invalid = true;
+      }else{
+         invalid = false;
+      }
+
+    }
 </script>
 
 
 
 <label class="label_input" for={id}>{label}</label>
-<input type="text" bind:value id={id}  class:invalid={value.length === 0} class="input_app">
+<input type="text" bind:value id={id}  class:invalid class="input_app" on:keyup={updateValue}>
 
 
 
@@ -31,12 +41,10 @@
     color: #000;
     outline: none;
     padding: 0.2em;
-
  }
 
 
  .invalid  {
-    background-color: #f11111;
-    
+    background-color: #f75757;
  }
 </style>
