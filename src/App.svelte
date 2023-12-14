@@ -1,5 +1,6 @@
 <script>
-  import Input from "./Input.svelte";
+
+ import Input from "./Input.svelte";
 
  let name = "John";
  let lastname = "Doe";

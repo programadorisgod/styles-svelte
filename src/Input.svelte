@@ -1,5 +1,7 @@
 <script>
-
+   import "./assets/Input.css"
+   import svg from "./assets/svelte.svg"
+   
     export let value;
     export let label;
     export let id;
@@ -15,9 +17,10 @@
       }
 
     }
+
 </script>
 
-
+<img src={svg} alt="logo_svelte">
 
 <label class="label_input" for={id}>{label}</label>
 <input type="text" bind:value id={id}  class:invalid class="input_app" on:keyup={updateValue}>
@@ -26,8 +29,8 @@
 
 
 <style>
-  
- .label_input{
+   /*
+  .label_input{
     margin: 0.5em 0 0.5em 0;
     color: #000;
  }
@@ -47,4 +50,5 @@
  .invalid  {
     background-color: #f75757;
  }
+ */
 </style>
